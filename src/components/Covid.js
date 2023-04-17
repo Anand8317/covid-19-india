@@ -16,7 +16,7 @@ const Covid = () => {
 
   return (
     <div>
-      {covid}
+      {covid[0]}
     </div>
   );
 };
