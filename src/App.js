@@ -1,9 +1,10 @@
 import './App.css';
+import Covid from './components/covid';
 
 function App() {
   return (
     <div className="App">
-      hi
+      <Covid />
     </div>
   );
 }

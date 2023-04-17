@@ -8,12 +8,7 @@ const fetchCovidAction = createAsyncThunk(
   FETCH_COVID_ONCE,
   async (post, { dispatch }) => {
     const res = await fetch(url);
-    const resJson = await res.json();
-    // const covid = await resJson.map((item) => ({
-    //   mission_id: item.mission_id,
-    //   mission_name: item.mission_name,
-    //   description: item.description,
-    // }));
+    const covid = await res.json();
     dispatch({ type: FETCH_COVID_ONCE, covid });
   },
 );
