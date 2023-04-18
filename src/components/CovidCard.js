@@ -6,9 +6,9 @@ import {
 import PropTypes from 'prop-types';
 
 const CovidCard = ({
-  key, title, text,
+  title, text,
 }) => (
-  // <Link to={`/Covid/${title.common}`} key={key}>
+  <Link to={`/Covid/${title}`} key={title}>
     <Col md={6} className="mb-4 col">
       <Card>
         <Card.Body>
@@ -17,19 +17,17 @@ const CovidCard = ({
         </Card.Body>
       </Card>
     </Col>
-  // </Link>
+  </Link>
 );
 
 CovidCard.propTypes = {
-  key: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.number,
 };
 
 CovidCard.defaultProps = {
-  key: '',
   title: '',
-  text: '',
+  text: 1,
 };
 
 export default CovidCard;
