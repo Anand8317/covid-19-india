@@ -19,7 +19,6 @@ const Covid = () => {
 
   const covid = useSelector((state) => state.covid);
   const covidArr = Object.keys(covid).map((key) => ({ id: key, ...covid[key] }));
-  console.log(covidArr);
 
   return (
     <Container>
