@@ -1,22 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Col, Card,
-} from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { FiArrowRightCircle } from 'react-icons/fi';
+import covidLogo from '../Images/covidImg.png';
 
 const CovidCard = ({
   title, text, className,
 }) => (
   <Link to={`/Covid/${title}`} key={title} className={className}>
-    <Col md={6} className="mb-4">
-      <Card>
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{text}</Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
+    <div>
+      <img src={covidLogo} alt="covidLogo" className="covid-img" />
+    </div>
+    <div className="subgrid">
+      <div className="arrow-container">
+        <FiArrowRightCircle className="arrow" />
+      </div>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
   </Link>
 );
 

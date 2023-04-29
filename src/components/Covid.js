@@ -1,16 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BsFillMicFill } from 'react-icons/bs';
 import { AiFillSetting } from 'react-icons/ai';
 import { fetchCovidAction } from '../redux/covid/covid';
 import CovidCard from './CovidCard';
+import Filter from './Filter';
+import covidLogo from '../Images/covidImg.png';
 import '../App.css';
 
 let flag = false;
 const Covid = () => {
+  const [input, setInput] = useState('');
   const dispatch = useDispatch();
-  console.log(flag);
   useEffect(() => {
     if (!flag) {
       dispatch(fetchCovidAction());
@@ -19,28 +21,33 @@ const Covid = () => {
   }, [dispatch]);
 
   const covid = useSelector((state) => state.covid);
-  console.log(covid);
-  const covidArr = Object.keys(covid).map((key) => ({ id: key, ...covid[key] }));
-  console.log(covid);
+  const covidArr1 = Object.keys(covid).map((key) => ({ id: key, ...covid[key] }));
+
+  const covidArr = input.trim()
+    ? [...covidArr1].filter((state) => state.id.toLowerCase().includes(input))
+    : [...covidArr1];
 
   return (
     <section className="homepage">
       <div className="toolbar">
-        <h1 className="brand">
-          <Link to="/">Covid 19 India</Link>
+        <h1>
+          <Link to="/" className="header">Covid 19 India</Link>
         </h1>
-        {/* <SearchBox query={query} setQuery={setQuery} /> */}
+        <Filter input={input} setInput={setInput} />
         <div className="d-row">
           <BsFillMicFill />
           <AiFillSetting />
         </div>
       </div>
-      <CovidCard
-        key={covidArr[0].id}
-        title={covidArr[0].id}
-        text={covidArr[0].total.confirmed}
-        className="feature-item"
-      />
+      <Link to={`/Covid/${covidArr.length ? covidArr[0].id : 0}`} key={covidArr.length ? covidArr[0].id : 0} className="feature">
+        <div>
+          <img src={covidLogo} alt="covidLogo" className="covid-img" />
+        </div>
+        <div className="subgrid">
+          <h3>{covidArr.length ? covidArr[0].id : 0}</h3>
+          <p>{covidArr.length ? covidArr[0].total.confirmed : 0}</p>
+        </div>
+      </Link>
       <div className="main-grid">
         {covidArr.slice(1, covidArr.length).map((item) => (
           <CovidCard
@@ -52,13 +59,6 @@ const Covid = () => {
         ))}
       </div>
     </section>
-    // <Container>
-    //   <Row>
-    //     {covidArr.map((object) => (
-    //       <CovidCard key={object.id} title={object.id} text={object.total.recovered} />
-    //     ))}
-    //   </Row>
-    // </Container>
   );
 };
 

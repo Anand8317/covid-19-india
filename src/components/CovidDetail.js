@@ -3,6 +3,7 @@ import { AiFillSetting } from 'react-icons/ai';
 import { BsFillArrowLeftSquareFill, BsFillMicFill } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { FiArrowRightCircle } from 'react-icons/fi';
 
 const CovidDetail = () => {
   const covid = useSelector((state) => state.covid);
@@ -33,27 +34,45 @@ const CovidDetail = () => {
         </div>
         <div className="detail-item">
           <h3>Confirmed</h3>
-          <p>{covidSpe.delta7.confirmed}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.confirmed}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
         <div className="detail-item">
           <h3>Deceased</h3>
-          <p>{covidSpe.delta7.deceased ? covidSpe.delta7.deceased : 0}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.deceased ? covidSpe.delta7.deceased : 0}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
         <div className="detail-item">
           <h3>Recovered</h3>
-          <p>{covidSpe.delta7.recovered}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.recovered}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
         <div className="detail-item">
           <h3>Tested</h3>
-          <p>{covidSpe.delta7.tested}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.tested}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
         <div className="detail-item">
           <h3>Vaccinated1</h3>
-          <p>{covidSpe.delta7.vaccinated1}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.vaccinated1}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
         <div className="detail-item">
           <h3>Vaccinated2</h3>
-          <p>{covidSpe.delta7.vaccinated2}</p>
+          <div className="arrow-container-detail">
+            <p>{covidSpe.delta7.vaccinated2}</p>
+            <FiArrowRightCircle className="arrow" />
+          </div>
         </div>
       </div>
     </section>
