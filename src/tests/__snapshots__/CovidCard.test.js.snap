@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Covid component test Testing covid page rendering 1`] = `null`;
+
+exports[`CovidCard component test Testing covid card page rendering 1`] = `null`;
