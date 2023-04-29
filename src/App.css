@@ -176,6 +176,10 @@ h2 {
   margin-top: 50px;
 }
 
+p {
+  color: white;
+}
+
 .error-handle > p {
   color: red;
 }
