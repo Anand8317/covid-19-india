@@ -9,7 +9,7 @@
 
 # 🚀 Live Demo <a name="live-demo"></a>
 
-[Covid19 India](Coming Soon)
+[Covid19 India Live Demo](https://www.loom.com/share/87c8dcaf325e4b67820621b4bf2883de)
 
 # 🚀 Live Link <a name="live-link"></a>
 
