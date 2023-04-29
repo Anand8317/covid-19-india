@@ -9,7 +9,6 @@ const CovidDetail = () => {
   const covidArr = Object.keys(covid).map((key) => ({ id: key, ...covid[key] }));
   const params = useParams();
   const covidSpe = covidArr.find((c) => c.id === params.title);
-  console.log(covidSpe);
 
   return (
     <section className="detail-section">

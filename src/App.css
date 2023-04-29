@@ -40,6 +40,13 @@
   background-color: var(--dark-blue);
 }
 
+.d-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
 .toolbar {
   background-color: #4369B2;
   display: flex;

@@ -6,7 +6,7 @@ import {
 import PropTypes from 'prop-types';
 
 const CovidCard = ({
-  title, text, className
+  title, text, className,
 }) => (
   <Link to={`/Covid/${title}`} key={title} className={className}>
     <Col md={6} className="mb-4">
@@ -23,11 +23,13 @@ const CovidCard = ({
 CovidCard.propTypes = {
   title: PropTypes.string,
   text: PropTypes.number,
+  className: PropTypes.string,
 };
 
 CovidCard.defaultProps = {
   title: '',
   text: 1,
+  className: '',
 };
 
 export default CovidCard;
