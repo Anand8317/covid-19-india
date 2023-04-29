@@ -6,10 +6,10 @@ import {
 import PropTypes from 'prop-types';
 
 const CovidCard = ({
-  title, text,
+  title, text, className
 }) => (
-  <Link to={`/Covid/${title}`} key={title}>
-    <Col md={6} className="mb-4 col">
+  <Link to={`/Covid/${title}`} key={title} className={className}>
+    <Col md={6} className="mb-4">
       <Card>
         <Card.Body>
           <Card.Title>{title}</Card.Title>

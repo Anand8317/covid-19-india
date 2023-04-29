@@ -1,9 +1,43 @@
-.col {
-  width: 45%;
+.grid {
+  width: 50%;
   background-color: pink;
   float: left;
-  margin-left: 2.5%;
-  margin-bottom: 2.5%;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  font-size: 1.2rem;
+  background-color: var(--light-blue);
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+
+.grid-item {
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.grid-item h3 {
+  font-size: 1.2em;
+}
+
+.grid-item:nth-child(4n),
+.grid-item:nth-child(4n + 1) {
+  background-color: var(--dark-blue);
 }
 
 .toolbar {

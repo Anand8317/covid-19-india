@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   Container, Row,
 } from 'react-bootstrap';
+import { BsFillMicFill } from 'react-icons/bs';
+import { AiFillSetting } from 'react-icons/ai';
 import { fetchCovidAction } from '../redux/covid/covid';
 import CovidCard from './CovidCard';
 import '../App.css';
@@ -21,13 +23,34 @@ const Covid = () => {
   const covidArr = Object.keys(covid).map((key) => ({ id: key, ...covid[key] }));
 
   return (
-    <Container>
-      <Row>
-        {covidArr.map((object) => (
-          <CovidCard key={object.id} title={object.id} text={object.total.recovered} />
+    <section className="homepage">
+      <div className="toolbar">
+        <h1 className="brand">
+          <Link to="/">Covid 19 India</Link>
+        </h1>
+        <SearchBox query={query} setQuery={setQuery} />
+        <div className="d-row">
+          <BsFillMicFill />
+          <AiFillSetting />
+        </div>
+      </div>
+      <div className="main-grid">
+        {covidArr.slice(1, count).map((item) => (
+          <CovidCard
+            title={c.name.common}
+            text={}
+            className="grid-item"
+          />
         ))}
-      </Row>
-    </Container>
+      </div>
+    </section>
+    // <Container>
+    //   <Row>
+    //     {covidArr.map((object) => (
+    //       <CovidCard key={object.id} title={object.id} text={object.total.recovered} />
+    //     ))}
+    //   </Row>
+    // </Container>
   );
 };
 
