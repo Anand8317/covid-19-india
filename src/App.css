@@ -169,6 +169,13 @@ h2 {
   font-size: 1.2rem;
 }
 
-p {
-  color: white;
+.error-handle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.error-handle > p {
+  color: red;
 }

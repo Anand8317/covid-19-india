@@ -4,6 +4,7 @@ import { BsFillArrowLeftSquareFill, BsFillMicFill } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { FiArrowRightCircle } from 'react-icons/fi';
+import { BiErrorAlt } from 'react-icons/bi';
 
 const CovidDetail = () => {
   const covid = useSelector((state) => state.covid);
@@ -79,7 +80,12 @@ const CovidDetail = () => {
               </div>
             </div>
           </>
-        ) : 0 }
+        ) : (
+          <div className="error-handle">
+            <BiErrorAlt />
+            <p>Page failed to load. Please go to the Homepage.</p>
+          </div>
+        ) }
     </section>
   );
 };
