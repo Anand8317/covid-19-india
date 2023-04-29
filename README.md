@@ -10,6 +10,11 @@
 # 🚀 Live Demo <a name="live-demo"></a>
 
 [Covid19 India](Coming Soon)
+
+# 🚀 Live Link <a name="live-link"></a>
+
+[Covid19 India Live Link](https://covid19-wq6u.onrender.com/)
+
 ### Server:
 - local.
 ### Database:
