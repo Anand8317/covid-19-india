@@ -83,9 +83,9 @@
 # 👥 Author:
 
 ### 👤 Anand Mohan Pathak:
-- GitHub: [@Anand8317](https://github.com/Anand8317)
-- Twitter: [@SalwaBallouti](https://twitter.com/anand029)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anand-pathak-473611171/)
+- GitHub: [Anand8317](https://github.com/Anand8317)
+- Twitter: [AnandPathak](https://twitter.com/anand029)
+- LinkedIn: [AnandPathak](https://www.linkedin.com/in/anand-pathak-473611171/)
   
 # 🔭 Future Features:
 - Use advanced JS data structures.
